@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,25 +14,20 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: baseline;
+            justify-content: center;
             align-items: center;
             perspective: 1000px;
             text-align: center;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #997f83 50%, #be5e85 75%, #bc1888 100%);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            background: black;
         }
 
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+       
 
         .container1 {
             width: 100%;
             max-width: 250px;
-            height:300px;
+            height: 300px;
             position: relative;
             box-shadow: 2px 5px 15px black;
         }
@@ -69,7 +65,7 @@
         .back   { transform: rotateY(180deg) translateZ(150px); }
         .left   { transform: rotateY(-90deg) translateZ(150px); }
         .right  { transform: rotateY(90deg) translateZ(150px); }
-        .top    { transform: rotateX(90deg) translateZ(150px); }
+        .top    { transform: rotateY(90deg) translateZ(150px); }
         .bottom { transform: rotateX(-90deg) translateZ(150px); }
 
         @keyframes rotate {
@@ -90,13 +86,17 @@
                 transform: scale(1.1);
             }
         }
+        .heading{
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 <body>
-    <div class="container mb-3"></div>
 
-    <div class="container mt-5">
-        <h1 class="mb-4 d-block">Happy Birthday <b class="placeholder-wave">Karthikeya</b><div class="beat">🥳🥳</div></h1>
+    <div class="container mt-1 heading">
+        <h1 class="mb-4 d-block fs-3 lh-lg">Happy Birthday <b class="fs-1 placeholder-wave">Karthikeya</b><div class="beat"> &#x2764;&#x2764;</div></h1>
     </div>
     
     <div class="container d-block mb-5">
@@ -104,17 +104,17 @@
     </div>
     
     <div class="container1 shadow-lg">
-        <div class="box ">
+        <div class="box">
             <div class="face front"><img src="p1.jpg" alt="Front"></div>
             <div class="face back"><img src="p3.jpg" alt="Back"></div>
             <div class="face left"><img src="p2.jpg" alt="Left"></div>
             <div class="face right"><img src="p4.jpg" alt="Right"></div>
-            <div class="face top"><img src="p1.png" alt="Top"></div>
-            <div class="face bottom"><img src="p2.jpg" alt="Bottom"></div>
+            <!-- <div class="face top"><img src="p1.png" alt="Front"></div>
+            <div class="face bottom"><img src="p2.jpg" alt="Bottom"></div> -->
         </div>
     </div>
 
-    <audio autoplay controls loop class="mt-5 mb-1">
+    <audio autoplay loop controls class="mt-5 mb-1">
         <source src="hbd-clip.mpeg" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
